@@ -73,7 +73,10 @@ NDDSLIBS = -lnddscppz -lnddscz -lnddscorez
 endif
 endif
 
-LIBS = -L$(NDDSHOME)/lib/$(ARCH) -L/usr/lib $(NDDSLIBS) $(SYSLIBS) -lglib-2.0 -lgstreamer-0.10 -lgstapp-0.10
+#LIBS = -L$(NDDSHOME)/lib/$(ARCH) -L/usr/lib $(NDDSLIBS) $(SYSLIBS) -lglib-2.0 -lgstreamer-0.10 -lgstapp-0.10
+
+LIBS = -L$(NDDSHOME)/lib/$(ARCH) -L/usr/lib $(NDDSLIBS) $(SYSLIBS) -lglib-2.0 -lgstreamer-0.10 -lgstapp-0.10 -lgobject-2.0
+
 
 COMMONSRC = src/CommonInfrastructure/DDSCommunicator.cxx     \
           src/CommonInfrastructure/OSAPI.cxx               \

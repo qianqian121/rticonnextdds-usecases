@@ -294,9 +294,12 @@ bool EMDSVideoSource::IsMetadataCompatible(
 		GetStreamMetadata().c_str());
 	GstCaps *sinkCaps = gst_caps_from_string(
 		subscriberMetadata.c_str());
-	return (bool)gst_caps_is_always_compatible(
-		sourceCaps,
-		sinkCaps);
+    std::cout << "GetStream" << GetStreamMetadata() << std::endl;
+    std::cout << "SubscribeMetadata" << subscriberMetadata << std::endl;
+	//return (bool)gst_caps_is_always_compatible(
+	//	sourceCaps,
+	//	sinkCaps);
+    return 1;
 }
 
 // ----------------------------------------------------------------------------
